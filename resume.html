@@ -18,24 +18,54 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<a href="resume.html" class="logo">Resume</a>
-					</header>
+				<header id="header">
+					<a href="resume.html" class="logo" data-i18n="resume">Resume</a>
+				</header>
 
 				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">Profile</a></li>
-							<li class="active"><a href="resume.html">Resume</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/Sudharsanan-Ravichandran" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/sudharsanan-ravichandran/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://x.com/sudharsanan_DA" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/messyfy_sudar/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						</ul>
-					</nav>
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html" data-i18n="projects">Projects</a></li>
+						<li><a href="generic.html" data-i18n="profile">Profile</a></li>
+						<li class="active"><a href="resume.html" data-i18n="resume">Resume</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://github.com/Sudharsanan-Ravichandran" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/sudharsanan-ravichandran/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://x.com/sudharsanan_DA" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.instagram.com/messyfy_sudar/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</nav>
+<!-- Language Switcher -->
+<style>
+	.lang-switcher-btn {
+		background: #f5f5f5;
+		color: #222;
+		border: 1px solid #bbb;
+		border-radius: 4px;
+		padding: 1px 16px;
+		margin-left: 4px;
+		margin-right: 4px;
+		font-size: 1em;
+		cursor: pointer;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+		transition: background 0.2s, color 0.2s, border 0.2s;
+	}
+	.lang-switcher-btn:hover {
+		background: #fff;
+		color: #0078d7;
+		border: 1px solid #0078d7;
+	}
+	.lang-switcher-btn.selected {
+		background: #65b0ece3;
+		color: #fff;
+		border: 1px solid #0078d7;
+	}
+</style>
+<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+	<button id="en-btn" class="lang-switcher-btn">English</button>
+	<button id="de-btn" class="lang-switcher-btn">Deutsch</button>
+</div>
 
 				<!-- Main -->
 					<div id="main">
@@ -50,116 +80,91 @@
 							<!-- Text stuff -->
 
 
-								<h2 style="margin-top: 5px; margin-bottom: 5px;">WORK EXPERIENCE</h2>
+								<h2 style="margin-top: 5px; margin-bottom: 5px;" data-i18n="work_exp">WORK EXPERIENCE</h2>
 								<dl style="margin-top: 0; padding-top: 0;">
-
-									<dt style="margin-top: 0; padding-top: 0;">Data Analyst Intern –  Albert Clement IT Services – France <br />
-										October 2024 – May 2025
+									<dt style="margin-top: 0; padding-top: 0;"><span data-i18n="master_thesis">Master Thesis –  Magna Electronics Europe GmbH & Co. OHG – Germany</span><br />
+										<span data-i18n="mt_period">October 2023 – May 2024</span>
 									</dt>
 									<dd style="text-align: justify; margin-top: 0; padding-top: 0;">
 										<ul style="text-align: justify; margin: 5px 0 0 20px; padding: 0;">
-											<li>Analyzed 10M+ records with MySQL/Python/Excel, delivering insights that increased revenue by 12%. </li>
-											<li>Designed Power BI/Tableau dashboards, enabling real-time KPI tracking and reducing report time by 30%.</li>
-											<li>Built forecasting models, improving supply chain accuracy by 18% and reducing inventory costs 15%.</li>
-											<li>Automated data workflows, saving 20+ hours/month and cutting reporting errors by 25%.
-
-											</li>
-										</ul>
-									</dd>
-
-
-									<dt style="margin-top: 0; padding-top: 0;">Master Thesis –  Magna Electronics Europe GmbH & Co. OHG – Germany<br />
-										October 2023 – May 2024
-									</dt>
-									<dd style="text-align: justify; margin-top: 0; padding-top: 0;">
-										<ul style="text-align: justify; margin: 5px 0 0 20px; padding: 0;">
-											<li>„Developing a Strategic Industry 4.0 Roadmap for Adoption in Magna Electronics globally by 2030 “, (Grade 1,0) </li>
+											<li data-i18n="mt_topic">„Developing a Strategic Industry 4.0 Roadmap for Adoption in Magna Electronics globally by 2030 “, (Grade 1,0)</li>
 											<li>Developed Power BI dashboards integrating IoT data to visualize Industry 4.0 trends and used SQL queries to extract insights from large datasets.</li>
-											<li>Analyzed operational gaps using SQL for data extraction, Excel for scenario modeling, and Power BI for visualizing future-state projections. 
-
-											</li>
+											<li>Analyzed operational gaps using SQL for data extraction, Excel for scenario modeling, and Power BI for visualizing future-state projections. </li>
 										</ul>
 									</dd>
 
-									<dt style="margin-top: 0; padding-top: 0;">Working Student –  Magna Electronics Europe GmbH & Co. OHG – Germany<br />
-										March 2023 – September 2024
+									<dt style="margin-top: 0; padding-top: 0;"><span data-i18n="working_student">Working Student –  Magna Electronics Europe GmbH & Co. OHG – Germany</span><br />
+										<span data-i18n="ws_period">March 2023 – September 2024</span>
 									</dt>
 									<dd style="text-align: justify; margin-top: 0; padding-top: 0;">
 										<ul style="text-align: justify; margin: 5px 0 0 20px; padding: 0;">
-											<li>Designed real-time Power BI dashboards integrating SQL-based operational data from nine manufacturing plants, enabling KPI monitoring and decision-making. </li>
-											<li>Streamlined customer requirement analysis with SQL queries and tracked quoting process efficiency using Power BI. </li>
-											<li>Automated quotation generation using Excel VBA, reducing manual effort by 50%, and tracked system improvements with Power BI dashboards. </li>
-											<li>Developed multilingual Power BI dashboards to present quotation system performance metrics to global teams.  
-
-											</li>
+											<li data-i18n="ws_dashboards">Designed real-time Power BI dashboards integrating SQL-based operational data from nine manufacturing plants, enabling KPI monitoring and decision-making.</li>
+											<li data-i18n="ws_analysis">Streamlined customer requirement analysis with SQL queries and tracked quoting process efficiency using Power BI.</li>
+											<li data-i18n="ws_automation">Automated quotation generation using Excel VBA, reducing manual effort by 50%, and tracked system improvements with Power BI dashboards.</li>
+											<li data-i18n="ws_multilingual">Developed multilingual Power BI dashboards to present quotation system performance metrics to global teams.</li>
 										</ul>
 									</dd>
 
-									<dt style="margin-top: 0; padding-top: 0;">Intern –  Magna Mirrors Holding GmbH (MML) – Germany<br />
-										August 2022 – January 2023
+									<dt style="margin-top: 0; padding-top: 0;"><span data-i18n="mml_intern">Intern –  Magna Mirrors Holding GmbH (MML) – Germany</span><br />
+										<span data-i18n="mml_period">August 2022 – January 2023</span>
 									</dt>
 									<dd style="text-align: justify; margin-top: 0; padding-top: 0;">
 										<ul style="text-align: justify; margin: 5px 0 0 20px; padding: 0;">
-											<li>Build a dashboard showcasing cost comparisons and efficiency metrics for EV charging port mechanisms versus competitor products.  </li>
-											<li>Create dashboards that visualize supplier performance trends and production feasibility metrics to support decision-making during prototype development.  </li>
-											<li>Create dashboards summarizing 3D printer outputs and comparing them against expected design specifications.  
-
-											</li>
+											<li data-i18n="mml_dashboard">Build a dashboard showcasing cost comparisons and efficiency metrics for EV charging port mechanisms versus competitor products.</li>
+											<li data-i18n="mml_supplier">Create dashboards that visualize supplier performance trends and production feasibility metrics to support decision-making during prototype development.</li>
+											<li data-i18n="mml_3d">Create dashboards summarizing 3D printer outputs and comparing them against expected design specifications.</li>
 										</ul>
 									</dd>
 
-									<dt style="margin-top: 10px; padding-top: 0;">Product Engineer – SL Lumax – India<br />
-										July 2017 – September 2021
+									<dt style="margin-top: 10px; padding-top: 0;"><span data-i18n="pe_title">Product Engineer – SL Lumax – India</span><br />
+										<span data-i18n="pe_period">July 2017 – September 2021</span>
 									</dt>
 									<dd style="text-align: justify; margin-top: 0; padding-top: 0;">
 										<ul style="text-align: justify; margin: 5px 0 0 20px; padding: 0;">
-											<li>Used Excel's conditional formatting and Power Query to clean and prepare production datasets for performance analysis. </li>
-											<li>Utilized advanced Excel functions (e.g., VLOOKUP, INDEX MATCH) to analyze component failure rates and identify root causes.</li>
-											<li>Developed interactive dashboards using PivotTables and charts to visualize production trends and optimize resource allocation.</li>
-											<li>Conducted regression analysis in Excel to evaluate the impact of material changes on product durability. 
-												
-											</li>
+											<li data-i18n="pe_excel">Used Excel's conditional formatting and Power Query to clean and prepare production datasets for performance analysis.</li>
+											<li data-i18n="pe_functions">Utilized advanced Excel functions (e.g., VLOOKUP, INDEX MATCH) to analyze component failure rates and identify root causes.</li>
+											<li data-i18n="pe_dashboards">Developed interactive dashboards using PivotTables and charts to visualize production trends and optimize resource allocation.</li>
+											<li data-i18n="pe_regression">Conducted regression analysis in Excel to evaluate the impact of material changes on product durability.</li>
 										</ul>
 									</dd>
 								</dl>
 
-								<h2 style="margin-top: 5px; margin-bottom: 5px;">EDUCATION</h2>
+								<h2 style="margin-top: 5px; margin-bottom: 5px;" data-i18n="education">EDUCATION</h2>
 								<dl style="margin-top: 0; padding-top: 0;">
-									<dt style="margin: 0; padding: 0;">Master of Business Administration and Engineering (MBA & Eng.) <br>
-										Hof University of Applied Sciences – Hof <br>
-										October 2021 – July 2024
+									<dt style="margin: 0; padding: 0;"><span data-i18n="mba_title">Master of Business Administration and Engineering (MBA & Eng.)</span> <br>
+										<span data-i18n="mba_uni">Hof University of Applied Sciences – Hof</span> <br>
+										<span data-i18n="mba_period">October 2021 – July 2024</span>
 									</dt>
-									<dd style="margin: 0; padding: 0;">Program – Operational Excellence <br>
-										Major: Data Analytics, Project Management, Industry 4.0 | Grade: 1,6</dd>
+									<dd style="margin: 0; padding: 0;"><span data-i18n="mba_program">Program – Operational Excellence</span> <br>
+										<span data-i18n="mba_major">Major: Data Analytics, Project Management, Industry 4.0 | Grade: 1,6</span></dd>
 								</dl>
 
 								<dl style="margin-top: 0; padding-top: 0;">
-									<dt style="margin: 0; padding: 0;">Bachelors of Engineering <br>
-										Anna University – India <br>
-										July 2013 – May 2017
+									<dt style="margin: 0; padding: 0;"><span data-i18n="be_title">Bachelors of Engineering</span> <br>
+										<span data-i18n="be_uni">Anna University – India</span> <br>
+										<span data-i18n="be_period">July 2013 – May 2017</span>
 									</dt>
-									<dd style="margin: 0; padding: 0;">Program – Mechanical Engineering <br>
-										Major: Product Development | Grade: 2,0</dd>
+									<dd style="margin: 0; padding: 0;"><span data-i18n="be_program">Program – Mechanical Engineering</span> <br>
+										<span data-i18n="be_major">Major: Product Development | Grade: 2,0</span></dd>
 								</dl>
 
-								<h2 style="margin-top: 5px; margin-bottom: 5px;">CERTIFICATIONS</h2>
+								<h2 style="margin-top: 5px; margin-bottom: 5px;" data-i18n="certifications">CERTIFICATIONS</h2>
 								<ul style="margin-top: 0; padding-top: 0;">
-
-									<li>Google Data Analytics Professional Certificate (2024)</li>
-									<li>Google Project Management Professional Certificate (2024)</li>
-									<li>Agile with Atlassian Jira (2024)</li>
-									<li>Successful Negotiation: Essential Strategies and Skills (2024)</li>
-									<li>Business processes in project management in SAP S/4 HANA (2022)</li>
-									<li>SAP Analytics Cloud - Become an augmented BI expert (2022)</li>
-									<li>Excel skills for business - Specialization (2020)</li>
+									<li data-i18n="cert_analytics">Google Data Analytics Professional Certificate (2024)</li>
+									<li data-i18n="cert_pm">Google Project Management Professional Certificate (2024)</li>
+									<li data-i18n="cert_jira">Agile with Atlassian Jira (2024)</li>
+									<li data-i18n="cert_negotiation">Successful Negotiation: Essential Strategies and Skills (2024)</li>
+									<li data-i18n="cert_sap_pm">Business processes in project management in SAP S/4 HANA (2022)</li>
+									<li data-i18n="cert_sac">SAP Analytics Cloud - Become an augmented BI expert (2022)</li>
+									<li data-i18n="cert_excel">Excel skills for business - Specialization (2020)</li>
 								</ul>
 
-								<h2 style="margin-top: 5px; margin-bottom: 5px;">SKILLS</h2>
+								<h2 style="margin-top: 5px; margin-bottom: 5px;" data-i18n="skills">SKILLS</h2>
 								<ul style="margin-top: 0; padding-top: 0;">
-									<li>SQL (MySQL)</li>
-									<li>Python (Pandas, NumPy, SciPy, Matplotlib)</li>
-									<li>Tableau, Microsoft Power BI</li>
-									<li>Excel (VLOOKUP, Data Validation, Power Query, Pivot Tables, VBA)</li>
+									<li data-i18n="skill_sql">SQL (MySQL)</li>
+									<li data-i18n="skill_python">Python (Pandas, NumPy, SciPy, Matplotlib)</li>
+									<li data-i18n="skill_bi">Tableau, Microsoft Power BI</li>
+									<li data-i18n="skill_excel">Excel (VLOOKUP, Data Validation, Power Query, Pivot Tables, VBA)</li>
 								</ul>
 
 
@@ -220,4 +225,144 @@
 		<script src="assets/js/main.js"></script>
 
 </body>
+<script>
+			const translations = {
+				en: {
+					'profile': 'Profile',
+					'projects': 'Projects',
+					'resume': 'Resume',
+					'work_exp': 'WORK EXPERIENCE',
+					'master_thesis': 'Master Thesis –  Magna Electronics Europe GmbH & Co. OHG – Germany',
+					'mt_period': 'October 2023 – May 2024',
+					'mt_topic': '„Developing a Strategic Industry 4.0 Roadmap for Adoption in Magna Electronics globally by 2030 “, (Grade 1,0)',
+					'working_student': 'Working Student –  Magna Electronics Europe GmbH & Co. OHG – Germany',
+					'ws_period': 'March 2023 – September 2024',
+					'ws_dashboards': 'Designed real-time Power BI dashboards integrating SQL-based operational data from nine manufacturing plants, enabling KPI monitoring and decision-making.',
+					'ws_analysis': 'Streamlined customer requirement analysis with SQL queries and tracked quoting process efficiency using Power BI.',
+					'ws_automation': 'Automated quotation generation using Excel VBA, reducing manual effort by 50%, and tracked system improvements with Power BI dashboards.',
+					'ws_multilingual': 'Developed multilingual Power BI dashboards to present quotation system performance metrics to global teams.',
+					'mml_intern': 'Intern –  Magna Mirrors Holding GmbH (MML) – Germany',
+					'mml_period': 'August 2022 – January 2023',
+					'mml_dashboard': 'Build a dashboard showcasing cost comparisons and efficiency metrics for EV charging port mechanisms versus competitor products.',
+					'mml_supplier': 'Create dashboards that visualize supplier performance trends and production feasibility metrics to support decision-making during prototype development.',
+					'mml_3d': 'Create dashboards summarizing 3D printer outputs and comparing them against expected design specifications.',
+					'pe_title': 'Product Engineer – SL Lumax – India',
+					'pe_period': 'July 2017 – September 2021',
+					'pe_excel': "Used Excel's conditional formatting and Power Query to clean and prepare production datasets for performance analysis.",
+					'pe_functions': 'Utilized advanced Excel functions (e.g., VLOOKUP, INDEX MATCH) to analyze component failure rates and identify root causes.',
+					'pe_dashboards': 'Developed interactive dashboards using PivotTables and charts to visualize production trends and optimize resource allocation.',
+					'pe_regression': 'Conducted regression analysis in Excel to evaluate the impact of material changes on product durability.',
+					'education': 'EDUCATION',
+					'mba_title': 'Master of Business Administration and Engineering (MBA & Eng.)',
+					'mba_uni': 'Hof University of Applied Sciences – Hof',
+					'mba_period': 'October 2021 – July 2024',
+					'mba_program': 'Program – Operational Excellence',
+					'mba_major': 'Major: Data Analytics, Project Management, Industry 4.0 | Grade: 1,6',
+					'be_title': 'Bachelors of Engineering',
+					'be_uni': 'Anna University – India',
+					'be_period': 'July 2013 – May 2017',
+					'be_program': 'Program – Mechanical Engineering',
+					'be_major': 'Major: Product Development | Grade: 2,0',
+					'certifications': 'CERTIFICATIONS',
+					'cert_analytics': 'Google Data Analytics Professional Certificate (2024)',
+					'cert_pm': 'Google Project Management Professional Certificate (2024)',
+					'cert_jira': 'Agile with Atlassian Jira (2024)',
+					'cert_negotiation': 'Successful Negotiation: Essential Strategies and Skills (2024)',
+					'cert_sap_pm': 'Business processes in project management in SAP S/4 HANA (2022)',
+					'cert_sac': 'SAP Analytics Cloud - Become an augmented BI expert (2022)',
+					'cert_excel': 'Excel skills for business - Specialization (2020)',
+					'skills': 'SKILLS',
+					'skill_sql': 'SQL (MySQL)',
+					'skill_python': 'Python (Pandas, NumPy, SciPy, Matplotlib)',
+					'skill_bi': 'Tableau, Microsoft Power BI',
+					'skill_excel': 'Excel (VLOOKUP, Data Validation, Power Query, Pivot Tables, VBA)',
+				},
+			de: {
+				'profile': 'Profil',
+				'projects': 'Projekte',
+				'resume': 'Lebenslauf',
+				'work_exp': 'BERUFSERFAHRUNG',
+				'master_thesis': 'Masterarbeit – Magna Electronics Europe GmbH & Co. OHG – Deutschland',
+				'mt_period': 'Oktober 2023 – Mai 2024',
+				'mt_topic': '„Entwicklung einer strategischen Industrie 4.0 Roadmap für die globale Einführung bei Magna Electronics bis 2030“, (Note 1,0)',
+				'working_student': 'Werkstudent – Magna Electronics Europe GmbH & Co. OHG – Deutschland',
+				'ws_period': 'März 2023 – September 2024',
+				'ws_dashboards': 'Echtzeit-Power-BI-Dashboards entwickelt, die SQL-basierte Betriebsdaten aus neun Werken integrieren und KPI-Überwachung sowie Entscheidungsfindung ermöglichen.',
+				'ws_analysis': 'Kundenanforderungsanalyse mit SQL-Abfragen optimiert und Angebotsprozess-Effizienz mit Power BI verfolgt.',
+				'ws_automation': 'Angebotserstellung mit Excel VBA automatisiert, manuellen Aufwand um 50% reduziert und Systemverbesserungen mit Power BI überwacht.',
+				'ws_multilingual': 'Mehrsprachige Power-BI-Dashboards entwickelt, um Leistungskennzahlen des Angebotssystems global zu präsentieren.',
+				'mml_intern': 'Praktikant – Magna Mirrors Holding GmbH (MML) – Deutschland',
+				'mml_period': 'August 2022 – Januar 2023',
+				'mml_dashboard': 'Dashboard erstellt, das Kostenvergleiche und Effizienzmetriken für EV-Lademechanismen im Vergleich zu Wettbewerbsprodukten zeigt.',
+				'mml_supplier': 'Dashboards erstellt, die Lieferantenleistungstrends und Produktionsmachbarkeitsmetriken zur Unterstützung von Entscheidungen während der Prototypenentwicklung visualisieren.',
+				'mml_3d': 'Dashboards erstellt, die 3D-Druckergebnisse zusammenfassen und mit den erwarteten Designspezifikationen vergleichen.',
+				'pe_title': 'Produktingenieur – SL Lumax – SüdKorea',
+				'pe_period': 'Juli 2017 – September 2021',
+				'pe_excel': 'Mit Excels bedingter Formatierung und Power Query Produktionsdatensätze für Leistungsanalysen bereinigt und vorbereitet.',
+				'pe_functions': 'Erweiterte Excel-Funktionen (z.B. SVERWEIS, INDEX VERGLEICH) genutzt, um Ausfallraten von Komponenten zu analysieren und Ursachen zu identifizieren.',
+				'pe_dashboards': 'Interaktive Dashboards mit PivotTables und Diagrammen entwickelt, um Produktionstrends zu visualisieren und Ressourceneinsatz zu optimieren.',
+				'pe_regression': 'Regressionsanalysen in Excel durchgeführt, um den Einfluss von Materialänderungen auf die Produktlebensdauer zu bewerten.',
+				'education': 'AUSBILDUNG',
+				'mba_title': 'Master of Business Administration and Engineering (MBA & Eng.)',
+				'mba_uni': 'Hochschule Hof – Hof',
+				'mba_period': 'Oktober 2021 – Juli 2024',
+				'mba_program': 'Studiengang – Operative Exzellenz',
+				'mba_major': 'Schwerpunkt: Datenanalyse, Projektmanagement, Industrie 4.0 | Note: 1,6',
+				'be_title': 'Bachelor of Engineering',
+				'be_uni': 'Anna University – Indien',
+				'be_period': 'Juli 2013 – Mai 2017',
+				'be_program': 'Studiengang – Maschinenbau',
+				'be_major': 'Schwerpunkt: Produktentwicklung | Note: 2,0',
+				'certifications': 'ZERTIFIZIERUNGEN',
+				'cert_analytics': 'Google Data Analytics Professional Certificate (2024)',
+				'cert_pm': 'Google Projektmanagement Professional Certificate (2024)',
+				'cert_jira': 'Agil mit Atlassian Jira (2024)',
+				'cert_negotiation': 'Erfolgreiche Verhandlungsführung: Wichtige Strategien und Fähigkeiten (2024)',
+				'cert_sap_pm': 'Geschäftsprozesse im Projektmanagement in SAP S/4 HANA (2022)',
+				'cert_sac': 'SAP Analytics Cloud – Werde ein Augmented BI Experte (2022)',
+				'cert_excel': 'Excel-Fähigkeiten für Unternehmen – Spezialisierung (2020)',
+				'skills': 'FÄHIGKEITEN',
+				'skill_sql': 'SQL (MySQL)',
+				'skill_python': 'Python (Pandas, NumPy, SciPy, Matplotlib)',
+				'skill_bi': 'Tableau, Microsoft Power BI',
+				'skill_excel': 'Excel (SVERWEIS, Datenvalidierung, Power Query, Pivot-Tabellen, VBA)',
+			},
+
+			};
+
+		function switchLanguage(lang) {
+			document.querySelectorAll('[data-i18n]').forEach(el => {
+				const key = el.getAttribute('data-i18n');
+				if (translations[lang][key]) {
+					el.textContent = translations[lang][key];
+				}
+			});
+		}
+
+		document.getElementById('en-btn').addEventListener('click', () => {
+			switchLanguage('en');
+			setActiveLangButton('en');
+		});
+		document.getElementById('de-btn').addEventListener('click', () => {
+			switchLanguage('de');
+			setActiveLangButton('de');
+		});
+</script>
+
+
+<script>
+	function setActiveLangButton(lang) {
+		document.getElementById('en-btn').classList.toggle('selected', lang === 'en');
+		document.getElementById('de-btn').classList.toggle('selected', lang === 'de');
+	}
+
+	setActiveLangButton('en');
+
+	document.getElementById('en-btn').addEventListener('click', () => {
+		setActiveLangButton('en');
+	});
+	document.getElementById('de-btn').addEventListener('click', () => {
+		setActiveLangButton('de');
+	});
+</script>
 </html>
