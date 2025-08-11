@@ -19,15 +19,15 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="generic.html" class="logo">Profile</a>
+						<a href="generic.html" class="logo" data-i18n="profile">Profile</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">Projects</a></li>
-							<li class="active"><a href="generic.html">Profile</a></li>
-							<li><a href="resume.html">Resume</a></li>
+							<li><a href="index.html" data-i18n="projects">Projects</a></li>
+							<li class="active"><a href="generic.html" data-i18n="profile">Profile</a></li>
+							<li><a href="resume.html" data-i18n="resume">Resume</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://github.com/Sudharsanan-Ravichandran" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
@@ -36,6 +36,36 @@
 							<li><a href="https://www.instagram.com/messyfy_sudar/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 						</ul>
 					</nav>
+<!-- Language Switcher -->
+<style>
+	.lang-switcher-btn {
+		background: #f5f5f5;
+		color: #222;
+		border: 1px solid #bbb;
+		border-radius: 4px;
+		padding: 1px 16px;
+		margin-left: 4px;
+		margin-right: 4px;
+		font-size: 1em;
+		cursor: pointer;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+		transition: background 0.2s, color 0.2s, border 0.2s;
+	}
+	.lang-switcher-btn:hover {
+		background: #fff;
+		color: #0078d7;
+		border: 1px solid #0078d7;
+	}
+	.lang-switcher-btn.selected {
+		background: #65b0ece3;
+		color: #fff;
+		border: 1px solid #0078d7;
+	}
+</style>
+<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+	<button id="en-btn" class="lang-switcher-btn">English</button>
+	<button id="de-btn" class="lang-switcher-btn">Deutsch</button>
+</div>
 
 				<!-- Main -->
 				<div id="main">
@@ -80,28 +110,28 @@
 						<section class="post">
 								<header class="major">
 								<div class="tagline-container">
-								<span class="tagline">Passionate Data Analyst</span>
+								<span class="tagline" data-i18n="tagline">Passionate Data Analyst</span>
 							</div>
 							
-								  <h1 style="text-transform: none;">Hi, I'm Sudharsanan</h1>
+								<h1 style="text-transform: none;" data-i18n="greeting">Hi, I'm Sudharsanan</h1>
 								<div class="image main">
 									   <img src="images/sudarshan.png" alt="" style="width: 40%; display: block; margin: 0 auto;" />
 									</div>
-									<p style = "text-align: justify;">Have you ever wondered how a single dashboard can transform decision-making for an entire organization? That's the question that drives my passion for data analytics. I'm Sudharsanan Ravichandran, a data enthusiast who loves turning complex datasets into simple, actionable insights.</p>  
+									<p style = "text-align: justify;" data-i18n="para1">Have you ever wondered how a single dashboard can transform decision-making for an entire organization? That's the question that drives my passion for data analytics. I'm Sudharsanan Ravichandran, a data enthusiast who loves turning complex datasets into simple, actionable insights.</p>  
 									
-									<p style = "text-align: justify;">I've always been fascinated by the power of data to tell stories and solve problems. My journey into data analytics began with a simple realization: behind every number is an opportunity to create meaningful change. When I started my career, I was overwhelmed by the complexity of large datasets and the challenge of making sense of them. Through years of learning SQL, Power BI, and Python—and countless late nights troubleshooting errors—I've transformed from a curious beginner into a confident data analyst who creates dashboards that empower businesses to thrive.</p> 
+									<p style = "text-align: justify;" data-i18n="para2">I've always been fascinated by the power of data to tell stories and solve problems. My journey into data analytics began with a simple realization: behind every number is an opportunity to create meaningful change. When I started my career, I was overwhelmed by the complexity of large datasets and the challenge of making sense of them. Through years of learning SQL, Power BI, and Python—and countless late nights troubleshooting errors—I've transformed from a curious beginner into a confident data analyst who creates dashboards that empower businesses to thrive.</p> 
 
-									<p style = "text-align: justify;">The turning point in my career came during my Master Thesis project at Magna International, where I developed a multilingual Power BI dashboard for real-time KPI tracking. Seeing how my work helped streamline operations across global teams was the moment I realized the true impact of data analytics. This experience fueled my passion for creating intuitive visualizations that bring data to life.</p> 
+									<p style = "text-align: justify;" data-i18n="para3">The turning point in my career came during my Master Thesis project at Magna International, where I developed a multilingual Power BI dashboard for real-time KPI tracking. Seeing how my work helped streamline operations across global teams was the moment I realized the true impact of data analytics. This experience fueled my passion for creating intuitive visualizations that bring data to life.</p> 
 
-									<p style = "text-align: justify;">Imagine a dashboard where vibrant visuals reveal hidden trends, heatmaps highlight key opportunities, and interactive filters put decision-making at your fingertips. That's what I strive to create every day. For instance, I once designed a Diversity & Inclusion dashboard that allowed HR leaders to track gender representation in leadership roles across departments in real time, helping them identify areas for improvement and take actionable steps toward inclusivity.</p> 
+									<p style = "text-align: justify;" data-i18n="para4">Imagine a dashboard where vibrant visuals reveal hidden trends, heatmaps highlight key opportunities, and interactive filters put decision-making at your fingertips. That's what I strive to create every day. For instance, I once designed a Diversity & Inclusion dashboard that allowed HR leaders to track gender representation in leadership roles across departments in real time, helping them identify areas for improvement and take actionable steps toward inclusivity.</p> 
 
-									<p style = "text-align: justify;">In my previous role at SL Corporation, I automated production analysis workflows using Excel VBA, reducing manual effort by 50% and saving over 200 hours annually for the team. These concrete achievements demonstrate my commitment to efficiency and innovation in data analytics.</p> 
+									<p style = "text-align: justify;" data-i18n="para5">In my previous role at SL Corporation, I automated production analysis workflows using Excel VBA, reducing manual effort by 50% and saving over 200 hours annually for the team. These concrete achievements demonstrate my commitment to efficiency and innovation in data analytics.</p> 
 
-									<p style = "text-align: justify;">I still remember the first time I presented a dashboard to a leadership team. Watching their excitement as they uncovered insights they hadn't seen before made me realize this is more than just work—it's about empowering people with knowledge they didn't know they had.</p> 
+									<p style = "text-align: justify;" data-i18n="para6">I still remember the first time I presented a dashboard to a leadership team. Watching their excitement as they uncovered insights they hadn't seen before made me realize this is more than just work—it's about empowering people with knowledge they didn't know they had.</p> 
 
-									<p style = "text-align: justify;">Currently, I'm part of the AI Business Fellowship at Perplexity, where I'm exploring the intersection of artificial intelligence and data analytics. Whether it's crafting dashboards or automating workflows, I'm here to make data work for you.</p> 
+									<p style = "text-align: justify;" data-i18n="para7">Currently, I'm part of the AI Business Fellowship at Perplexity, where I'm exploring the intersection of artificial intelligence and data analytics. Whether it's crafting dashboards or automating workflows, I'm here to make data work for you.</p> 
 
-									<p style = "text-align: justify;">Let's connect! Whether you're looking for someone to build your next big dashboard or simply want to chat about data analytics trends, feel free to reach out—I'd love to hear from you.</p> 
+									<p style = "text-align: justify;" data-i18n="para8">Let's connect! Whether you're looking for someone to build your next big dashboard or simply want to chat about data analytics trends, feel free to reach out—I'd love to hear from you.</p> 
 									
 								</header>
 						</section>
@@ -173,4 +203,71 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+<script>
+	const translations = {
+		en: {
+			'profile': 'Profile',
+			'projects': 'Projects',
+			'resume': 'Resume',
+			'tagline': 'Passionate Data Analyst',
+			'greeting': "Hi, I'm Sudharsanan",
+			'para1': 'Have you ever wondered how a single dashboard can transform decision-making for an entire organization? That\'s the question that drives my passion for data analytics. I\'m Sudharsanan Ravichandran, a data enthusiast who loves turning complex datasets into simple, actionable insights.',
+			'para2': 'I have always been fascinated by the power of data to tell stories and solve problems. My journey into data analytics began with a simple realization: behind every number is an opportunity to create meaningful change. When I started my career, I was overwhelmed by the complexity of large datasets and the challenge of making sense of them. Through years of learning SQL, Power BI, and Python—and countless late nights troubleshooting errors—I\'ve transformed from a curious beginner into a confident data analyst who creates dashboards that empower businesses to thrive.',
+			'para3': 'The turning point in my career came during my Master Thesis project at Magna International, where I developed a multilingual Power BI dashboard for real-time KPI tracking. Seeing how my work helped streamline operations across global teams was the moment I realized the true impact of data analytics. This experience fueled my passion for creating intuitive visualizations that bring data to life.',
+			'para4': 'Imagine a dashboard where vibrant visuals reveal hidden trends, heatmaps highlight key opportunities, and interactive filters put decision-making at your fingertips. That\'s what I strive to create every day. For instance, I once designed a Diversity & Inclusion dashboard that allowed HR leaders',
+			'para5': 'In my previous role at SL Corporation, I automated production analysis workflows using Excel VBA, reducing manual effort by 50% and saving over 200 hours annually for the team. These concrete achievements demonstrate my commitment to efficiency and innovation in data analytics.',
+			'para6': 'I still remember the first time I presented a dashboard to a leadership team. Watching their excitement as they uncovered insights they hadn\'t seen before made me realize this is more than just work—it\'s about empowering people with knowledge they didn\'t know they had.',
+			'para7': 'Currently, I\'m part of the AI Business Fellowship at Perplexity, where I\'m exploring the intersection of artificial intelligence and data analytics. Whether it\'s crafting dashboards or automating workflows, I\'m here to make data work for you.',
+			'para8': 'Let\'s connect! Whether you\'re looking for someone to build your next big dashboard or simply want to chat about data analytics trends, feel free to reach out—I\'d love to hear from you.'
+		},
+		de: {
+			'profile': 'Profil',
+			'projects': 'Projekte',
+			'resume': 'Lebenslauf',
+			'tagline': 'Leidenschaftlicher Datenanalyst',
+			'greeting': "Hallo, ich bin Sudharsanan",
+			'para1': 'Haben Sie sich jemals gefragt, wie ein einziges Dashboard die Entscheidungsfindung für ein ganzes Unternehmen verändern kann? Diese Frage treibt meine Leidenschaft für Datenanalyse an. Ich bin Sudharsanan Ravichandran, ein Datenenthusiast, der es liebt, komplexe Datensätze in einfache, umsetzbare Erkenntnisse zu verwandeln.',
+			'para2': 'Ich war schon immer fasziniert von der Macht der Daten, Geschichten zu erzählen und Probleme zu lösen. Meine Reise in die Datenanalyse begann mit der einfachen Erkenntnis: Hinter jeder Zahl verbirgt sich die Möglichkeit, bedeutende Veränderungen zu bewirken. Als ich meine Karriere begann, war ich von der Komplexität großer Datensätze überwältigt und stand vor der Herausforderung, sie zu verstehen. Durch jahrelanges Lernen von SQL, Power BI und Python – und unzählige späte Nächte beim Beheben von Fehlern – habe ich mich von einem neugierigen Anfänger zu einem selbstbewussten Datenanalysten entwickelt, der Dashboards erstellt, die Unternehmen zum Erfolg verhelfen.',
+			'para3': 'Der Wendepunkt in meiner Karriere kam während meines Masterarbeitsprojekts bei Magna International, wo ich ein mehrsprachiges Power BI-Dashboard für die Echtzeit-KPI-Verfolgung entwickelte. Zu sehen, wie meine Arbeit dazu beitrug, die Abläufe in globalen Teams zu optimieren, war der Moment, in dem ich die wahre Wirkung von Datenanalyse erkannte. Diese Erfahrung befeuerte meine Leidenschaft für die Erstellung intuitiver Visualisierungen, die Daten zum Leben erwecken.',
+			'para4': 'Stellen Sie sich ein Dashboard vor, in dem lebendige Visualisierungen verborgene Trends aufdecken, Heatmaps wichtige Chancen hervorheben und interaktive Filter die Entscheidungsfindung an Ihre Fingerspitzen legen. Genau das strebe ich jeden Tag an. Zum Beispiel habe ich einmal ein Diversity & Inclusion-Dashboard entworfen, das es HR-Führungskräften ermöglichte, die Geschlechterrepräsentation in Führungspositionen in Echtzeit zu verfolgen und Bereiche für Verbesserungen zu identifizieren.',
+			'para5': 'In meiner vorherigen Rolle bei SL Corporation automatisierte ich Produktionsanalyse-Workflows mit Excel VBA, wodurch der manuelle Aufwand um 50 % reduziert und dem Team jährlich über 200 Stunden gespart wurden. Diese konkreten Erfolge zeigen mein Engagement für Effizienz und Innovation in der Datenanalyse.',
+			'para6': 'Ich erinnere mich noch gut an das erste Mal, als ich ein Dashboard einem Führungsteam präsentierte. Die Begeisterung zu sehen, als sie Erkenntnisse entdeckten, die sie zuvor nicht gesehen hatten, ließ mich erkennen, dass es hier um mehr als nur Arbeit geht – es geht darum, Menschen mit Wissen zu ermächtigen, von dem sie nicht wussten, dass sie es haben.',
+			'para7': 'Derzeit bin ich Teil des AI Business Fellowship bei Perplexity, wo ich die Schnittstelle zwischen künstlicher Intelligenz und Datenanalyse erkunde. Ob es darum geht, Dashboards zu erstellen oder Workflows zu automatisieren, ich bin hier, um Daten für Sie nutzbar zu machen.',
+			'para8': 'Lassen Sie uns verbinden! Ob Sie jemanden suchen, der Ihr nächstes großes Dashboard erstellt, oder einfach nur über Trends in der Datenanalyse sprechen möchten, zögern Sie nicht, mich zu kontaktieren – ich würde mich freuen, von Ihnen zu hören.'
+		}
+	};
+
+	function switchLanguage(lang) {
+		document.querySelectorAll('[data-i18n]').forEach(el => {
+			const key = el.getAttribute('data-i18n');
+			if (translations[lang][key]) {
+				el.textContent = translations[lang][key];
+			}
+		});
+	}
+
+	document.getElementById('en-btn').addEventListener('click', () => {
+		switchLanguage('en');
+		setActiveLangButton('en');
+	});
+	document.getElementById('de-btn').addEventListener('click', () => {
+		switchLanguage('de');
+		setActiveLangButton('de');
+	});
+</script>
+<script>
+	function setActiveLangButton(lang) {
+		document.getElementById('en-btn').classList.toggle('selected', lang === 'en');
+		document.getElementById('de-btn').classList.toggle('selected', lang === 'de');
+	}
+
+	setActiveLangButton('en');
+
+	document.getElementById('en-btn').addEventListener('click', () => {
+		setActiveLangButton('en');
+	});
+	document.getElementById('de-btn').addEventListener('click', () => {
+		setActiveLangButton('de');
+	});
+</script>
 </html>
