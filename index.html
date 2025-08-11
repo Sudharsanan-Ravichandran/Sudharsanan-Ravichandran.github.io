@@ -19,26 +19,26 @@
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Sudharsanan Ravichandran<br />
-						</h1>
-						<p>Data Analyst Intern | AI Business Fellow <br /> Skilled in SQL | Python | Power BI | Tableau | Excel <br /><a href="https://github.com/Sudharsanan-Ravichandran">@Sudharsanan-Ravichandran</a> 
-						</p>
+						<h1 data-i18n="name">Sudharsanan Ravichandran</h1>
+						<p data-i18n="role">Data Analyst Intern | AI Business Fellow</p>
+						<p data-i18n="skills">Skilled in SQL | Python | Power BI | Tableau | Excel</p>
+						<p><a href="https://github.com/Sudharsanan-Ravichandran" data-i18n="github">@Sudharsanan-Ravichandran</a></p>
 						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly" data-i18n="continue">Continue</a></li>
 						</ul>
 					</div>
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Portfolio</a>
+						<a href="index.html" class="logo" data-i18n="portfolio">Portfolio</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">Profile</a></li>
-							<li><a href="resume.html">Resume</a></li>
+							<li class="active"><a href="index.html" data-i18n="projects">Projects</a></li>
+							<li><a href="generic.html" data-i18n="profile">Profile</a></li>
+							<li><a href="resume.html" data-i18n="resume">Resume</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://github.com/Sudharsanan-Ravichandran" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
@@ -47,6 +47,36 @@
 							<li><a href="https://www.instagram.com/messyfy_sudar/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 						</ul>
 					</nav>
+				<!-- Language Switcher -->
+				<style>
+							.lang-switcher-btn {
+								background: #f5f5f5;
+								color: #222;
+								border: 1px solid #bbb;
+								border-radius: 4px;
+								padding: 1px 16px;
+								margin-left: 4px;
+								margin-right: 4px;
+								font-size: 1em;
+								cursor: pointer;
+								box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+								transition: background 0.2s, color 0.2s, border 0.2s;
+							}
+							.lang-switcher-btn:hover {
+								background: #fff;
+								color: #0078d7;
+								border: 1px solid #0078d7;
+							}
+							.lang-switcher-btn.selected {
+								background: #65b0ece3;
+								color: #fff;
+								border: 1px solid #0078d7;
+							}
+				</style>
+				<div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+					<button id="en-btn" class="lang-switcher-btn">English</button>
+					<button id="de-btn" class="lang-switcher-btn">Deutsch</button>
+				</div>
 
 				<!-- Main -->
 					<div id="main">
@@ -55,70 +85,151 @@
 							
 
 						<!-- Posts -->
+		<script>
+			// Example translation dictionary
+					const translations = {
+						en: {
+							'name': 'Sudharsanan Ravichandran',
+							'role': 'Data Analyst Intern | AI Business Fellow',
+							'skills': 'Skilled in SQL | Python | Power BI | Tableau | Excel',
+							'github': '@Sudharsanan-Ravichandran',
+							'continue': 'Continue',
+							'portfolio': 'Portfolio',
+							'projects': 'Projects',
+							'profile': 'Profile',
+							'resume': 'Resume',
+							'sm_title': 'Sustainable Manufacturing',
+							'sm_desc': 'Ready to transform your manufacturing process into a model of sustainability and efficiency, guided by powerful analytics? This project harnesses advanced analytics to unlock actionable insights from your sustainable manufacturing data. By evaluating metrics such as material efficiency, energy productivity, water conservation, and CO₂ emissions, the dashboard benchmarks machine performance, flags inefficiencies, and detects anomalies. It empowers decision-makers to identify high-impact opportunities, optimize resource use, and balance productivity with environmental responsibility—all essential for driving a truly sustainable manufacturing operation.',
+							'mi_title': 'Manufacturing Intelligence',
+							'mi_desc': 'Imagine transforming manufacturing operations by detecting inefficiencies, predicting machine failures, and optimizing production—all through one powerful dashboard. This interactive dashboard centralizes machine performance data to provide actionable insights for improving efficiency and enabling predictive maintenance. Built using Power BI, it visualizes metrics like defect rates, production speed, and energy consumption, helping decision-makers identify underperforming machines and reduce downtime. With real-time visibility into operations, this tool drives smarter decisions and enhances productivity.',
+							'csa_title': 'Customer Support Analytics',
+							'csa_desc': 'What if you could pinpoint where your customer support needs improvement across every department, agent, and location—at a glance? This interactive dashboard transforms customer support data into actionable insights. Using Power BI, it centralizes metrics like call volumes, unresolved issues, and satisfaction ratings. Managers can identify bottlenecks, recognize top agents, and understand geographical trends. The dashboard enhances service quality by providing a comprehensive view of operations, enabling data-driven decisions to improve efficiency and customer satisfaction.',
+							'ec_title': 'Energy Consumption',
+							'ec_desc': 'What if you could uncover hidden opportunities to optimize energy usage across cities and buildings, all in one view? This interactive dashboard centralizes energy data for five major U.S. cities, providing insights into consumption patterns by city, building, and energy type. Using Power BI, it identifies high-cost buildings and seasonal trends, empowering decision-makers to optimize energy usage and reduce costs. Whether aiming to cut expenses or enhance sustainability, this dashboard offers actionable insights to drive impactful changes in energy management.',
+							'di_title': 'Diversity and Inclusion',
+							'di_desc': 'What if you could visualize gender diversity trends across your organization, revealing opportunities for more inclusive leadership? This interactive dashboard analyzes gender diversity trends across departments, job levels, and regions from 2012 to 2020. Using Power BI, it provides actionable insights to improve diversity and inclusion initiatives. The dashboard enables leadership teams to monitor diversity metrics dynamically, informing recruitment strategies and decision-making processes. Whether aiming to increase women in executive roles or enhance departmental diversity, this tool offers valuable insights for creating a more inclusive workplace.', 
+							'view_project': 'View Project'
+						},
+						de: {
+							'name': 'Sudharsanan Ravichandran',
+							'role': 'Datenanalyst Praktikant | KI Business Fellow',
+							'skills': 'Kompetent in SQL | Python | Power BI | Tableau | Excel',
+							'github': '@Sudharsanan-Ravichandran',
+							'continue': 'Weiter',
+							'portfolio': 'Portfolio',
+							'projects': 'Projekte',
+							'profile': 'Profil',
+							'resume': 'Lebenslauf',
+							'sm_title': 'Nachhaltige Fertigung',
+							'sm_desc': 'Bereit, Ihren Fertigungsprozess mit leistungsstarker Analytik nachhaltig und effizient zu gestalten? Dieses Projekt nutzt fortschrittliche Analysen, um verwertbare Erkenntnisse aus Ihren Nachhaltigkeitsdaten zu gewinnen. Durch die Bewertung von Kennzahlen wie Materialeffizienz, Energieproduktivität, Wassereinsparung und CO₂-Emissionen vergleicht das Dashboard Maschinenleistungen, erkennt Ineffizienzen und Anomalien. Es ermöglicht Entscheidungsträgern, Chancen mit hoher Wirkung zu identifizieren, Ressourcen zu optimieren und Produktivität mit Umweltverantwortung in Einklang zu bringen – alles entscheidend für eine wirklich nachhaltige Fertigung.',
+							'mi_title': 'Fertigungsintelligenz',
+							'mi_desc': 'Stellen Sie sich vor, Sie könnten Fertigungsabläufe durch die Erkennung von Ineffizienzen, die Vorhersage von Maschinenfehlern und die Optimierung der Produktion transformieren – alles über ein leistungsstarkes Dashboard. Dieses interaktive Dashboard zentralisiert Maschinendaten, um verwertbare Erkenntnisse zur Effizienzsteigerung und prädiktiven Wartung zu liefern. Mit Power BI visualisiert es Kennzahlen wie Fehlerquoten, Produktionsgeschwindigkeit und Energieverbrauch, um Entscheidungsträgern zu helfen, leistungsschwache Maschinen zu identifizieren und Ausfallzeiten zu reduzieren. Mit Echtzeit-Einblicken in die Abläufe fördert dieses Tool intelligentere Entscheidungen und steigert die Produktivität.',
+							'csa_title': 'Kundenservice-Analytik',
+							'csa_desc': 'Was wäre, wenn Sie auf einen Blick erkennen könnten, wo Ihr Kundenservice in jeder Abteilung, bei jedem Agenten und an jedem Standort verbessert werden muss? Dieses interaktive Dashboard verwandelt Kundendienstdaten in verwertbare Erkenntnisse. Mit Power BI zentralisiert es Kennzahlen wie Anrufvolumen, ungelöste Probleme und Zufriedenheitsbewertungen. Manager können Engpässe identifizieren, Top-Agenten erkennen und geografische Trends verstehen. Das Dashboard verbessert die Servicequalität, indem es eine umfassende Sicht auf die Abläufe bietet und datengestützte Entscheidungen zur Effizienzsteigerung und Kundenzufriedenheit ermöglicht.',
+							'ec_title': 'Energieverbrauch',
+							'ec_desc': 'Was wäre, wenn Sie verborgene Möglichkeiten zur Optimierung des Energieverbrauchs in Städten und Gebäuden auf einen Blick entdecken könnten? Dieses interaktive Dashboard zentralisiert Energiedaten für fünf große US-Städte und bietet Einblicke in Verbrauchsmuster nach Stadt, Gebäude und Energietyp. Mit Power BI identifiziert es kostenintensive Gebäude und saisonale Trends und befähigt Entscheidungsträger, den Energieverbrauch zu optimieren und Kosten zu senken. Ob zur Kostensenkung oder zur Verbesserung der Nachhaltigkeit – dieses Dashboard bietet verwertbare Erkenntnisse für wirkungsvolle Veränderungen im Energiemanagement.',
+							'di_title': 'Diversität und Inklusion',
+							'di_desc': 'Was wäre, wenn Sie Geschlechtervielfaltstrends in Ihrer Organisation visualisieren könnten, um Chancen für eine inklusivere Führung zu erkennen? Dieses interaktive Dashboard analysiert Geschlechtervielfaltstrends über Abteilungen, Jobebenen und Regionen von 2012 bis 2020. Mit Power BI bietet es verwertbare Erkenntnisse zur Verbesserung von Diversitäts- und Inklusionsinitiativen. Das Dashboard ermöglicht es Führungsteams, Diversitätskennzahlen dynamisch zu überwachen und Personalstrategien sowie Entscheidungsprozesse zu informieren. Ob Zielsetzung zur Erhöhung des Frauenanteils in Führungspositionen oder Verbesserung der Abteilungsvielfalt – dieses Tool bietet wertvolle Einblicke für eine inklusivere Arbeitsumgebung.',
+							'view_project': 'Projekt ansehen'
+						}
+					};
+
+			// Function to switch language
+			function switchLanguage(lang) {
+				document.querySelectorAll('[data-i18n]').forEach(el => {
+					const key = el.getAttribute('data-i18n');
+					if (translations[lang][key]) {
+						el.textContent = translations[lang][key];
+					}
+				});
+			}
+
+					function setActiveLangButton(lang) {
+						document.getElementById('en-btn').classList.toggle('selected', lang === 'en');
+						document.getElementById('de-btn').classList.toggle('selected', lang === 'de');
+					}
+
+					// Set default language highlight on page load
+					setActiveLangButton('en');
+
+					document.getElementById('en-btn').addEventListener('click', () => {
+						switchLanguage('en');
+						setActiveLangButton('en');
+					});
+					document.getElementById('de-btn').addEventListener('click', () => {
+						switchLanguage('de');
+						setActiveLangButton('de');
+					});
+		</script>
 							<section class="posts">
 								
 								<article>
 									<header>
 										
-										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P6-Sustainable_Manufacturing_SQL">Sustainable Manufacturing<br />
+										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P6-Sustainable_Manufacturing_SQL">
+											<span data-i18n="sm_title">Sustainable Manufacturing</span><br />
 										</a></h2>
 									</header>
 									<a href="https://github.com/Sudharsanan-Ravichandran/P6-Sustainable_Manufacturing_SQL" class="image fit"><img src="images/Sustainable_Manuf.png" alt="" width="300" height = "300" /></a>
-									<p>Ready to transform your manufacturing process into a model of sustainability and efficiency, guided by powerful analytics? This project harnesses advanced analytics to unlock actionable insights from your sustainable manufacturing data. By evaluating metrics such as material efficiency, energy productivity, water conservation, and CO₂ emissions, the dashboard benchmarks machine performance, flags inefficiencies, and detects anomalies. It empowers decision-makers to identify high-impact opportunities, optimize resource use, and balance productivity with environmental responsibility—all essential for driving a truly sustainable manufacturing operation.</p>
+									<p data-i18n="sm_desc">Ready to transform your manufacturing process into a model of sustainability and efficiency, guided by powerful analytics? This project harnesses advanced analytics to unlock actionable insights from your sustainable manufacturing data. By evaluating metrics such as material efficiency, energy productivity, water conservation, and CO₂ emissions, the dashboard benchmarks machine performance, flags inefficiencies, and detects anomalies. It empowers decision-makers to identify high-impact opportunities, optimize resource use, and balance productivity with environmental responsibility—all essential for driving a truly sustainable manufacturing operation.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Sudharsanan-Ravichandran/P6-Sustainable_Manufacturing_SQL" class="button">View Project</a></li>
+										<li><a href="https://github.com/Sudharsanan-Ravichandran/P6-Sustainable_Manufacturing_SQL" class="button" data-i18n="view_project">View Project</a></li>
 									</ul>
 								</article>
 								
 								<article>
 									<header>
 										
-										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P4-Manufacturing_Intelligence">Manufacturing Intelligence<br />
+										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P4-Manufacturing_Intelligence">
+											<span data-i18n="mi_title">Manufacturing Intelligence</span><br />
 										</a></h2>
 									</header>
 									<a href="https://github.com/Sudharsanan-Ravichandran/P4-Manufacturing_Intelligence" class="image fit"><img src="images/Manufacturing_Intelligence.png" alt="" width="300" height = "300" /></a>
-									<p>Imagine transforming manufacturing operations by detecting inefficiencies, predicting machine failures, and optimizing production—all through one powerful dashboard. This interactive dashboard centralizes machine performance data to provide actionable insights for improving efficiency and enabling predictive maintenance. Built using Power BI, it visualizes metrics like defect rates, production speed, and energy consumption, helping decision-makers identify underperforming machines and reduce downtime. With real-time visibility into operations, this tool drives smarter decisions and enhances productivity.</p>
+									<p data-i18n="mi_desc">Imagine transforming manufacturing operations by detecting inefficiencies, predicting machine failures, and optimizing production—all through one powerful dashboard. This interactive dashboard centralizes machine performance data to provide actionable insights for improving efficiency and enabling predictive maintenance. Built using Power BI, it visualizes metrics like defect rates, production speed, and energy consumption, helping decision-makers identify underperforming machines and reduce downtime. With real-time visibility into operations, this tool drives smarter decisions and enhances productivity.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Sudharsanan-Ravichandran/P4-Manufacturing_Intelligence" class="button">View Project</a></li>
+										<li><a href="https://github.com/Sudharsanan-Ravichandran/P4-Manufacturing_Intelligence" class="button" data-i18n="view_project">View Project</a></li>
 									</ul>
 								</article>
 
 								<article>
 									<header>
 										
-										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P3-Customer_Support">Customer Support Analytics<br />
+										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P3-Customer_Support">
+											<span data-i18n="csa_title">Customer Support Analytics</span><br />
 										</a></h2>
 									</header>
 									<a href="https://github.com/Sudharsanan-Ravichandran/P3-Customer_Support" class="image fit"><img src="images/call_center.png" alt="" width="300" height = "300" /></a>
-									<p>What if you could pinpoint where your customer support needs improvement across every department, agent, and location—at a glance? This interactive dashboard transforms customer support data into actionable insights. Using Power BI, it centralizes metrics like call volumes, unresolved issues, and satisfaction ratings. Managers can identify bottlenecks, recognize top agents, and understand geographical trends. The dashboard enhances service quality by providing a comprehensive view of operations, enabling data-driven decisions to improve efficiency and customer satisfaction.</p>
+									<p data-i18n="csa_desc">What if you could pinpoint where your customer support needs improvement across every department, agent, and location—at a glance? This interactive dashboard transforms customer support data into actionable insights. Using Power BI, it centralizes metrics like call volumes, unresolved issues, and satisfaction ratings. Managers can identify bottlenecks, recognize top agents, and understand geographical trends. The dashboard enhances service quality by providing a comprehensive view of operations, enabling data-driven decisions to improve efficiency and customer satisfaction.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Sudharsanan-Ravichandran/P3-Customer_Support" class="button">View Project</a></li>
+										<li><a href="https://github.com/Sudharsanan-Ravichandran/P3-Customer_Support" class="button" data-i18n="view_project">View Project</a></li>
 									</ul>
 								</article>
 
 								<article>
 									<header>
 										
-										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P2-Energy_Consumption">Energy Consumption<br />
+										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P2-Energy_Consumption">
+											<span data-i18n="ec_title">Energy Consumption</span><br />
 										</a></h2>
 									</header>
 									<a href="https://github.com/Sudharsanan-Ravichandran/P2-Energy_Consumption" class="image fit"><img src="images/energy_consumption.png" alt="" width="300" height = "300" /></a>
-									<p>What if you could uncover hidden opportunities to optimize energy usage across cities and buildings, all in one view? This interactive dashboard centralizes energy data for five major U.S. cities, providing insights into consumption patterns by city, building, and energy type. Using Power BI, it identifies high-cost buildings and seasonal trends, empowering decision-makers to optimize energy usage and reduce costs. Whether aiming to cut expenses or enhance sustainability, this dashboard offers actionable insights to drive impactful changes in energy management. </p>
+									<p data-i18n="ec_desc">What if you could uncover hidden opportunities to optimize energy usage across cities and buildings, all in one view? This interactive dashboard centralizes energy data for five major U.S. cities, providing insights into consumption patterns by city, building, and energy type. Using Power BI, it identifies high-cost buildings and seasonal trends, empowering decision-makers to optimize energy usage and reduce costs. Whether aiming to cut expenses or enhance sustainability, this dashboard offers actionable insights to drive impactful changes in energy management. </p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Sudharsanan-Ravichandran/P2-Energy_Consumption" class="button">View Project</a></li>
+										<li><a href="https://github.com/Sudharsanan-Ravichandran/P2-Energy_Consumption" class="button" data-i18n="view_project">View Project</a></li>
 									</ul>
 								</article>
 								
 								<article>
 									<header>
 										
-										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P1-Diversity_Inclusion">Diversity and Inclusion<br />
+										<h2><a href="https://github.com/Sudharsanan-Ravichandran/P1-Diversity_Inclusion">
+											<span data-i18n="di_title">Diversity and Inclusion</span><br />
 										</a></h2>
 									</header>
 									<a href="https://github.com/Sudharsanan-Ravichandran/P1-Diversity_Inclusion" class="image fit"><img src="images/diversity_inclusion.png" alt="" width="300" height = "300" /></a>
-									<p>What if you could visualize gender diversity trends across your organization, revealing opportunities for more inclusive leadership? This interactive dashboard analyzes gender diversity trends across departments, job levels, and regions from 2012 to 2020. Using Power BI, it provides actionable insights to improve diversity and inclusion initiatives. The dashboard enables leadership teams to monitor diversity metrics dynamically, informing recruitment strategies and decision-making processes. Whether aiming to increase women in executive roles or enhance departmental diversity, this tool offers valuable insights for creating a more inclusive workplace.</p>
+									<p data-i18n="di_desc">What if you could visualize gender diversity trends across your organization, revealing opportunities for more inclusive leadership? This interactive dashboard analyzes gender diversity trends across departments, job levels, and regions from 2012 to 2020. Using Power BI, it provides actionable insights to improve diversity and inclusion initiatives. The dashboard enables leadership teams to monitor diversity metrics dynamically, informing recruitment strategies and decision-making processes. Whether aiming to increase women in executive roles or enhance departmental diversity, this tool offers valuable insights for creating a more inclusive workplace.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Sudharsanan-Ravichandran/P1-Diversity_Inclusion" class="button">View Project</a></li>
+										<li><a href="https://github.com/Sudharsanan-Ravichandran/P1-Diversity_Inclusion" class="button" data-i18n="view_project">View Project</a></li>
 									</ul>
 								</article>
 								
