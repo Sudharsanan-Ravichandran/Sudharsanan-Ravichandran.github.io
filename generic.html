@@ -49,7 +49,7 @@
 		font-size: 1em;
 		cursor: pointer;
 		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-		transition: background 0.2s, color 0.2s, border 0.2s;
+		transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
 	}
 	.lang-switcher-btn:hover {
 		background: #fff;
@@ -61,10 +61,28 @@
 		color: #fff;
 		border: 1px solid #0078d7;
 	}
+	
+	/* Dark theme button styles */
+	.lang-switcher-btn.dark-theme {
+		background: #ffffff;
+		color: #333333;
+		border: 1px solid #666666;
+		box-shadow: 0 2px 8px rgba(255,255,255,0.2);
+	}
+	.lang-switcher-btn.dark-theme:hover {
+		background: #f0f0f0;
+		color: #0078d7;
+		border: 1px solid #0078d7;
+	}
+	.lang-switcher-btn.dark-theme.selected {
+		background: #0078d7;
+		color: #ffffff;
+		border: 1px solid #ffffff;
+	}
 </style>
 <div style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
 	<button id="en-btn" class="lang-switcher-btn">English</button>
-	<button id="de-btn" class="lang-switcher-btn">Deutsch</button>
+	<button id="de-btn" class="lang-switcher-btn">German</button>
 </div>
 
 				<!-- Main -->
@@ -270,5 +288,162 @@
 		setActiveLangButton('de');
 	});
 </script>
-</html>
 
+<script>
+	// Function to calculate relative luminance of a color
+	function getLuminance(r, g, b) {
+		const [rs, gs, bs] = [r, g, b].map(c => {
+			c = c / 255;
+			return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+		});
+		return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+	}
+
+	// Function to extract RGB values from a color string
+	function getRGBFromColor(color) {
+		// Handle different color formats
+		if (color.startsWith('rgb(')) {
+			const match = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+			if (match) {
+				return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
+			}
+		} else if (color.startsWith('#')) {
+			const hex = color.slice(1);
+			if (hex.length === 3) {
+				return [
+					parseInt(hex[0] + hex[0], 16),
+					parseInt(hex[1] + hex[1], 16),
+					parseInt(hex[2] + hex[2], 16)
+				];
+			} else if (hex.length === 6) {
+				return [
+					parseInt(hex.slice(0, 2), 16),
+					parseInt(hex.slice(2, 4), 16),
+					parseInt(hex.slice(4, 6), 16)
+				];
+			}
+		}
+		return [255, 255, 255]; // Default to white if parsing fails
+	}
+
+	// Function to detect if background is dark
+	function isBackgroundDark(element) {
+		const computedStyle = window.getComputedStyle(element);
+		const backgroundColor = computedStyle.backgroundColor;
+		const [r, g, b] = getRGBFromColor(backgroundColor);
+		const luminance = getLuminance(r, g, b);
+		
+		// Consider background dark if luminance is less than 0.5
+		return luminance < 0.5;
+	}
+
+	// Function to update button theme based on background
+	function updateButtonTheme() {
+		const buttons = document.querySelectorAll('.lang-switcher-btn');
+		const body = document.body;
+		
+		// Check if body background is dark
+		const isDark = isBackgroundDark(body);
+		
+		buttons.forEach(button => {
+			if (isDark) {
+				button.classList.add('dark-theme');
+			} else {
+				button.classList.remove('dark-theme');
+			}
+		});
+	}
+
+	// Function to observe background changes
+	function observeBackgroundChanges() {
+		// Create a MutationObserver to watch for style changes
+		const observer = new MutationObserver((mutations) => {
+			mutations.forEach((mutation) => {
+				if (mutation.type === 'attributes' && 
+					(mutation.attributeName === 'style' || mutation.attributeName === 'class')) {
+					updateButtonTheme();
+				}
+			});
+		});
+
+		// Observe changes to body element
+		observer.observe(document.body, {
+			attributes: true,
+			attributeFilter: ['style', 'class']
+		});
+
+		// Also observe changes to wrapper and main elements
+		const wrapper = document.getElementById('wrapper');
+		const main = document.getElementById('main');
+		
+		if (wrapper) {
+			observer.observe(wrapper, {
+				attributes: true,
+				attributeFilter: ['style', 'class']
+			});
+		}
+		
+		if (main) {
+			observer.observe(main, {
+				attributes: true,
+				attributeFilter: ['style', 'class']
+			});
+		}
+	}
+
+	// Function to check for CSS custom properties or theme classes
+	function checkForThemeClasses() {
+		const body = document.body;
+		const html = document.documentElement;
+		
+		// Check for common theme classes
+		const hasDarkTheme = body.classList.contains('dark') || 
+							body.classList.contains('dark-theme') ||
+							body.classList.contains('dark-mode') ||
+							html.classList.contains('dark') ||
+							html.classList.contains('dark-theme') ||
+							html.classList.contains('dark-mode');
+		
+		// Check for CSS custom properties
+		const computedStyle = getComputedStyle(body);
+		const colorScheme = computedStyle.getPropertyValue('color-scheme');
+		const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		
+		return hasDarkTheme || colorScheme.includes('dark') || prefersDark;
+	}
+
+	// Enhanced theme detection function
+	function detectAndApplyTheme() {
+		const buttons = document.querySelectorAll('.lang-switcher-btn');
+		const isDark = checkForThemeClasses() || isBackgroundDark(document.body);
+		
+		buttons.forEach(button => {
+			if (isDark) {
+				button.classList.add('dark-theme');
+			} else {
+				button.classList.remove('dark-theme');
+			}
+		});
+	}
+
+	// Initialize theme detection when page loads
+	document.addEventListener('DOMContentLoaded', () => {
+		// Initial theme detection
+		detectAndApplyTheme();
+		
+		// Set up background change observation
+		observeBackgroundChanges();
+		
+		// Listen for system theme changes
+		if (window.matchMedia) {
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectAndApplyTheme);
+		}
+		
+		// Periodic check for theme changes (fallback)
+		setInterval(detectAndApplyTheme, 2000);
+	});
+
+	// Also run on window load to catch any late-loading styles
+	window.addEventListener('load', detectAndApplyTheme);
+</script>
+</html>
